@@ -25,4 +25,10 @@ public class ConfigHelperTest {
         String path = ConfigHelper.findConnectorLibPath("PostgreSQL");
         Assert.assertTrue(path.contains("postgresql"));
     }
+    
+    @Test
+    public void testFindConnectorLibPath_SQLServer() {
+        String path = ConfigHelper.findConnectorLibPath("SQLServer");
+        Assert.assertTrue(path.contains("mssql"));
+    }
 }
